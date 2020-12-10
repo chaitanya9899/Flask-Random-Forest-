@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    
+
+    <title> Accident Severity Probability Detector</title>
+  </head>
+  <style>
+  body{
+   /* The image used */
+ 
+   /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #f8f9fa;
+    text-align: left;
+    background-color: #1d2124;
+  
+}
+  </style>
+
+
+  <body background="{{ url_for('static', filename='images/img.jpeg') }}">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#"> Accident Severity  Detector</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About Us</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Contact Us</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div class="container">
+<h2 class='text-center mt-3'> Accident Severity Probability Detector</h2>
+<form action="/" method="POST">
+
+
+
+  <div class="form-group">
+    <label for="Road_Type">Enter Road Type </label>
+    <select  class="form-control custom-select" name="Road_Type" id="Road_Type">
+      <option value="0">Single carriageway</option>
+      <option value="1">Dual carriageway</option>
+      <option value="2">Roundabout</option>
+      <option value="3">One way street</option>
+      <option value="4">Slip road</option>
+      <option value="5">Unknown</option>
+
+      </select>
+  </div>
+ 
+
+  <div class="form-group">
+    <label for="Speed_limit">Enter Speed </label>
+    <input type="text" class="form-control" id="Speed_limit" name="Speed_limit" placeholder="Enter Speed Value">
+  </div>
+
+  
+
+  <div class="form-group">
+    <label for="Light_Conditions">Light Conditions</label>
+    <select  class="form-control custom-select" name="Light_Conditions" id="Light_Conditions">
+     <option value="0">Daylight:Street light present</option>
+      <option value="1">Darkness: Street lights present and lit</option>
+      <option value="2">Darkeness: No street lighting</option>
+      <option value="3">Darkness: Street lighting</option>
+      <option value="4">Darkness: Street lights present but unlit</option>
+      
+      </select>
+  </div>
+
+
+
+
+  <div class="form-group">
+    <label for="Weather_Conditions">Weather Conditions</label>
+    <select  class="form-control custom-select" name="Weather_Conditions" id="Weather_Conditions">
+     <option value="0">Fine without high winds</option>
+      <option value="1">Raining without high winds</option>
+      <option value="2">Other</option>
+      <option value="3">Unknown</option>
+      <option value="4">Raining with high winds</option>
+      <option value="5">Fine with high winds</option>
+      <option value="6">Snowing without high winds</option>
+      <option value="7">Fog or mist</option>
+      <option value="8">Snowing with high winds</option>
+      
+      </select>
+  </div>
+
+ 
+
+  <div class="form-group">
+    <label for="Road_Surface_Conditions">Road Surface Conditions</label>
+    <select  class="form-control custom-select" name="Road_Surface_Conditions" id="Road_Surface_Conditions">
+      <option value="0">Dry</option>
+      <option value="1">Wet/Damp</option>
+      <option value="2">Frost/Ice</option>
+      <option value="3">Snow</option>
+      <option value="4">Flood (Over 3cm of water)</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+    <label for="Urban_or_Rural_Area">Urban or Rural Area</label>
+    <select  class="form-control custom-select" name="Urban_or_Rural_Area" id="Urban_or_Rural_Area">
+      <option value="1">Urban</option>
+      <option value="2">Rural</option>
+      
+      </select>
+  </div>
+
+
+  <button class='btn btn-primary'>Submit</button>
+</form> 
+</div>
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+  
+</html>
