@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+        <!-- =====BOX ICONS===== -->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Portfolio website complete</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Chaitu</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title"><span>Road Accident</span><br>Severity US</h1>
+
+                    <a href="/" class="button">Prediction</a>
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/chaitanya-kumar-b9b86712a/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="live:.cid.eb38b01ff733bc2f" class="home__social-icon"><i class='bx bxl-skype' ></i></a>
+                    <a href="https://github.com/chaitanya9899" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                </div>
+
+                <div class="home__img">    
+                    <img src="{{ url_for('static', filename='images/imgg.jpg') }}" alt="">
+                </div>
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="{{ url_for('static', filename='images/about.jpg') }}" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">I'am Chaitanya Kumar</h2>
+                        <p class="about__text">I have experience in Python and Machine learning (Flask,Django),including team management and i'm worked
+                        in various projects,Deep Learning,OpenCV,NLTK,Tkinter,Flask integration.</p>           
+                    </div>                                   
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle">Profesional Skills</h2>
+                        
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                 <i class='bx bxl-python skills__icon' style='color:#af13a4'></i>
+                                <span class="skills__name">Python</span>
+                            </div>
+                            <div class="skills__bar skills__html">
+
+                            </div>
+                            <div>
+                                <span class="skills__percentage">95%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                 <i class='bx bxs-brain skills__icon' style='color:#af13a4'></i>
+                                <span class="skills__name">Machine Learning</span>
+                            </div>
+                            <div class="skills__bar skills__css">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                 <i class='bx bx-show-alt skills__icon' style='color:#af13a4'></i>
+                                <span class="skills__name">OpenCV/Deep Learning</span>
+                            </div>
+                            <div class="skills__bar skills__js">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">80%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-kubernetes skills__icon' style='color:#af13a4'></i>
+                                <span class="skills__name">Web Scraping</span>
+                            </div>
+                            <div class="skills__bar skills__ux">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>              
+                        <img src="{{ url_for('static', filename='images/ailab.jpg') }}" alt="" class="skills__img">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== WORK =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Work</h2>
+
+                <div class="work__container bd-grid">
+                    <div class="work__img">
+                        <img src="{{ url_for('static', filename='images/work1.jpg') }}" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="{{ url_for('static', filename='images/ailab1.jpg') }}" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="{{ url_for('static', filename='images/work2.jpg') }}" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="{{ url_for('static', filename='images/work4.jpg') }}" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="{{ url_for('static', filename='images/work5.jpg') }}" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="{{ url_for('static', filename='images/work6.jpg') }}" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <form action="" class="contact__form">
+                        <input type="text" placeholder="Name" class="contact__input">
+                        <input type="mail" placeholder="Email" class="contact__input">
+                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                        <input type="button" value="Submit" class="contact__button button">
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Chaitanya Kumar</p>
+            <div class="footer__social">
+                <a href="https://www.facebook.com/chaitanya.emandi/" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://www.instagram.com/chaitanyaemandi/" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://twitter.com/ChaituEmandi" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+            </div>
+            <p>&#169; 2020 copyright all right reserved</p>
+        </footer>
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
